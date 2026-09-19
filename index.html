@@ -19,7 +19,7 @@
             🛒 GITAM Marketplace
         </div>
 
-        <button id="sellBtn" class="sell-button">
+        <button id="sellBtn" class="sell-button" type="button">
             + Sell Item
         </button>
 
@@ -41,27 +41,51 @@
     <!-- CATEGORIES -->
     <section class="categories">
 
-        <button class="category-btn active" data-category="All">
+        <button
+            class="category-btn active"
+            data-category="All"
+            type="button"
+        >
             All
         </button>
 
-        <button class="category-btn" data-category="Books">
+        <button
+            class="category-btn"
+            data-category="Books"
+            type="button"
+        >
             📚 Books
         </button>
 
-        <button class="category-btn" data-category="Electronics">
+        <button
+            class="category-btn"
+            data-category="Electronics"
+            type="button"
+        >
             💻 Electronics
         </button>
 
-        <button class="category-btn" data-category="Cycles">
+        <button
+            class="category-btn"
+            data-category="Cycles"
+            type="button"
+        >
             🚲 Cycles
         </button>
 
-        <button class="category-btn" data-category="Hostel">
+        <button
+            class="category-btn"
+            data-category="Hostel"
+            type="button"
+        >
             🏠 Hostel
         </button>
 
-        <button class="category-btn" data-category="Others">
+        <button
+            class="category-btn"
+            data-category="Others"
+            type="button"
+        >
             📦 Others
         </button>
 
@@ -75,10 +99,11 @@
             Available Products
         </h2>
 
-        <div id="productsContainer" class="products-container">
-
+        <div
+            id="productsContainer"
+            class="products-container"
+        >
             <p>Loading products...</p>
-
         </div>
 
     </main>
@@ -97,15 +122,22 @@
                 ×
             </button>
 
-            <h2>Sell Your Item</h2>
+            <h2>
+                Sell Your Item
+            </h2>
 
             <p class="approval-info">
                 🛡️ Your product will be reviewed by the admin before it appears
                 on GITAM Marketplace.
             </p>
 
-            <form id="sellForm">
 
+            <form
+                id="sellForm"
+                enctype="multipart/form-data"
+            >
+
+                <!-- ITEM NAME -->
                 <label for="itemName">
                     Item Name
                 </label>
@@ -113,11 +145,13 @@
                 <input
                     type="text"
                     id="itemName"
+                    name="name"
                     placeholder="Example: Engineering Mathematics Book"
                     required
                 >
 
 
+                <!-- PRICE -->
                 <label for="itemPrice">
                     Price (₹)
                 </label>
@@ -125,17 +159,23 @@
                 <input
                     type="number"
                     id="itemPrice"
+                    name="price"
                     placeholder="Example: 500"
                     min="1"
                     required
                 >
 
 
+                <!-- CATEGORY -->
                 <label for="itemCategory">
                     Category
                 </label>
 
-                <select id="itemCategory" required>
+                <select
+                    id="itemCategory"
+                    name="category"
+                    required
+                >
 
                     <option value="">
                         Select Category
@@ -164,6 +204,7 @@
                 </select>
 
 
+                <!-- IMAGE -->
                 <label for="itemImage">
                     Product Image
                 </label>
@@ -171,6 +212,7 @@
                 <input
                     type="file"
                     id="itemImage"
+                    name="image"
                     accept="image/jpeg,image/png,image/webp"
                 >
 
@@ -179,18 +221,21 @@
                 </small>
 
 
+                <!-- DESCRIPTION -->
                 <label for="itemDescription">
                     Description
                 </label>
 
                 <textarea
                     id="itemDescription"
+                    name="description"
                     rows="4"
                     placeholder="Describe your product..."
                     required
                 ></textarea>
 
 
+                <!-- SELLER NAME -->
                 <label for="sellerName">
                     Your Name
                 </label>
@@ -198,11 +243,13 @@
                 <input
                     type="text"
                     id="sellerName"
+                    name="seller_name"
                     placeholder="Enter your name"
                     required
                 >
 
 
+                <!-- GITAM EMAIL -->
                 <label for="sellerEmail">
                     GITAM Email
                 </label>
@@ -210,6 +257,7 @@
                 <input
                     type="email"
                     id="sellerEmail"
+                    name="seller_email"
                     placeholder="yourname@gitam.in"
                     required
                 >
@@ -221,6 +269,7 @@
                 </small>
 
 
+                <!-- WHATSAPP -->
                 <label for="sellerPhone">
                     WhatsApp Number
                 </label>
@@ -228,12 +277,14 @@
                 <input
                     type="tel"
                     id="sellerPhone"
+                    name="seller_phone"
                     placeholder="10-digit mobile number"
                     maxlength="10"
                     required
                 >
 
 
+                <!-- SUBMIT -->
                 <button
                     type="submit"
                     class="submit-button"
@@ -282,7 +333,7 @@
     </footer>
 
 
-    <!-- IMPORTANT: JAVASCRIPT FILE -->
+    <!-- JAVASCRIPT -->
     <script src="/script.js"></script>
 
 </body>

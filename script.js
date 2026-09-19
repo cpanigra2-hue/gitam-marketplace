@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
 });
 
+
 // =====================================
 // SELL MODAL
 // =====================================
@@ -44,6 +45,7 @@ function setupSellModal() {
         });
     }
 }
+
 
 // =====================================
 // SEARCH
@@ -81,6 +83,7 @@ function setupSearch() {
         displayProducts(filtered);
     });
 }
+
 
 // =====================================
 // CATEGORY FILTER
@@ -124,6 +127,7 @@ function setupCategories() {
         });
     });
 }
+
 
 // =====================================
 // LOAD PRODUCTS
@@ -177,6 +181,7 @@ async function loadProducts() {
         `;
     }
 }
+
 
 // =====================================
 // DISPLAY PRODUCTS
@@ -263,6 +268,7 @@ function displayProducts(products) {
 
         }).join("");
 }
+
 
 // =====================================
 // SELL FORM
@@ -412,6 +418,7 @@ function setupSellForm() {
         } finally {
 
             if (submitButton) {
+
                 submitButton.disabled = false;
                 submitButton.textContent =
                     originalText || "Sell Item";
@@ -419,6 +426,7 @@ function setupSellForm() {
         }
     });
 }
+
 
 // =====================================
 // PRODUCT DETAILS
@@ -459,6 +467,7 @@ async function showProductDetails(id) {
         );
     }
 }
+
 
 // =====================================
 // OPEN PRODUCT DETAILS MODAL
@@ -616,6 +625,7 @@ function openProductDetails(product) {
     };
 }
 
+
 // =====================================
 // ESCAPE HTML
 // =====================================
@@ -633,6 +643,7 @@ function escapeHTML(value) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
 
 // =====================================
 // MAKE FUNCTIONS AVAILABLE
