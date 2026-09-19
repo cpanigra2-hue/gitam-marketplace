@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GITAM Marketplace</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            🛒 GITAM Marketplace
+        </div>
+
+        <button id="sellBtn" class="sell-button">
+            + Sell Item
+        </button>
+
+    </header>
+
+
+    <!-- SEARCH -->
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+        >
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+
+        <button class="category-btn active" data-category="All">
+            All
+        </button>
+
+        <button class="category-btn" data-category="Books">
+            📚 Books
+        </button>
+
+        <button class="category-btn" data-category="Electronics">
+            💻 Electronics
+        </button>
+
+        <button class="category-btn" data-category="Cycles">
+            🚲 Cycles
+        </button>
+
+        <button class="category-btn" data-category="Hostel">
+            🏠 Hostel
+        </button>
+
+        <button class="category-btn" data-category="Others">
+            📦 Others
+        </button>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <main>
+
+        <h2 class="section-title">
+            Available Products
+        </h2>
+
+        <div id="productsContainer" class="products-container">
+
+            <p>Loading products...</p>
+
+        </div>
+
+    </main>
+
+
+    <!-- SELL MODAL -->
+    <div id="sellModal" class="modal">
+
+        <div class="modal-content">
+
+            <button
+                id="closeSellModal"
+                class="close-btn"
+                type="button"
+            >
+                ×
+            </button>
+
+            <h2>Sell Your Item</h2>
+
+            <p class="approval-info">
+                🛡️ Your product will be reviewed by the admin before it appears
+                on GITAM Marketplace.
+            </p>
+
+            <form id="sellForm">
+
+                <label for="itemName">
+                    Item Name
+                </label>
+
+                <input
+                    type="text"
+                    id="itemName"
+                    placeholder="Example: Engineering Mathematics Book"
+                    required
+                >
+
+
+                <label for="itemPrice">
+                    Price (₹)
+                </label>
+
+                <input
+                    type="number"
+                    id="itemPrice"
+                    placeholder="Example: 500"
+                    min="1"
+                    required
+                >
+
+
+                <label for="itemCategory">
+                    Category
+                </label>
+
+                <select id="itemCategory" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Books">
+                        Books
+                    </option>
+
+                    <option value="Electronics">
+                        Electronics
+                    </option>
+
+                    <option value="Cycles">
+                        Cycles
+                    </option>
+
+                    <option value="Hostel">
+                        Hostel
+                    </option>
+
+                    <option value="Others">
+                        Others
+                    </option>
+
+                </select>
+
+
+                <label for="itemImage">
+                    Product Image
+                </label>
+
+                <input
+                    type="file"
+                    id="itemImage"
+                    accept="image/jpeg,image/png,image/webp"
+                >
+
+                <small>
+                    JPG, PNG or WEBP • Maximum 5 MB
+                </small>
+
+
+                <label for="itemDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="itemDescription"
+                    rows="4"
+                    placeholder="Describe your product..."
+                    required
+                ></textarea>
+
+
+                <label for="sellerName">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="sellerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label for="sellerEmail">
+                    GITAM Email
+                </label>
+
+                <input
+                    type="email"
+                    id="sellerEmail"
+                    placeholder="yourname@gitam.in"
+                    required
+                >
+
+                <small>
+                    Use your GITAM email:
+                    <strong>@gitam.in</strong> or
+                    <strong>@gitam.edu</strong>
+                </small>
+
+
+                <label for="sellerPhone">
+                    WhatsApp Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="sellerPhone"
+                    placeholder="10-digit mobile number"
+                    maxlength="10"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    Submit Product for Approval
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div id="detailsModal" class="modal">
+
+        <div class="modal-content details-modal-content">
+
+            <button
+                id="closeDetailsModal"
+                class="close-btn"
+                type="button"
+            >
+                ×
+            </button>
+
+            <div id="detailsContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 GITAM Marketplace
+        </p>
+
+        <p>
+            Student-to-Student Marketplace
+        </p>
+
+    </footer>
+
+
+    <!-- IMPORTANT: JAVASCRIPT FILE -->
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
