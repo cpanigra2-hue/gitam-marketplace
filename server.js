@@ -102,23 +102,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// =================================
-// GITAM EMAIL VALIDATION
-// =================================
-
-function isGitamEmail(email) {
-
-    if (!email) {
-        return false;
-    }
-
-    email = email.toLowerCase().trim();
-
-    return (
-        email.endsWith("@gitam.in") ||
-        email.endsWith("@gitam.edu")
-    );
-}
 
 // =================================
 // GET APPROVED PRODUCTS

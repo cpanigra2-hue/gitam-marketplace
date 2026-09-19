@@ -313,22 +313,7 @@ function setupSellForm() {
                     "sellerPhone"
                 )?.value.trim();
 
-            // -----------------------------
-            // GITAM EMAIL VALIDATION
-            // -----------------------------
-
-            if (
-                !sellerEmail.toLowerCase().endsWith("@gitam.in") &&
-                !sellerEmail.toLowerCase().endsWith("@gitam.edu")
-            ) {
-
-                alert(
-                    "Please use your GITAM email address.\n\nExample: yourname@gitam.in"
-                );
-
-                return;
-            }
-
+            
             // -----------------------------
             // PHONE VALIDATION
             // -----------------------------
