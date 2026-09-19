@@ -218,22 +218,7 @@ app.post("/api/products", upload.single("image"), (req, res) => {
             });
         }
 
-        // -----------------------------
-        // GITAM EMAIL
-        // -----------------------------
-
-        if (!isGitamEmail(seller_email)) {
-
-            if (req.file) {
-                try {
-                    fs.unlinkSync(req.file.path);
-                } catch (e) {}
-            }
-
-            return res.status(400).json({
-                error: "Only GITAM email addresses are allowed"
-            });
-        }
+        
 
         // -----------------------------
         // PRICE VALIDATION
