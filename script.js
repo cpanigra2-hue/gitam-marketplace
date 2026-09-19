@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setupSellModal() {
 
-    const sellButton = document.getElementById("sellButton");
+    const sellButton = document.getElementById("sellBtn");
     const sellModal = document.getElementById("sellModal");
     const closeSellModal = document.getElementById("closeSellModal");
 
